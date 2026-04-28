@@ -163,7 +163,7 @@ voice_assistant:
           - script.execute: activate_stop_word_once
   on_tts_end:
     - homeassistant.event:
-        event: satellite1_tts_ready
+        event: esphome.satellite1_tts_ready
         data:
           url: !lambda 'return x;'
   # When the voice assistant ends ...
