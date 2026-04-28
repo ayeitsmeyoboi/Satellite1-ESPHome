@@ -97,8 +97,9 @@ switch:
 
 external_components:
   - source:
-      type: local
-      path: ../esphome/components
+      type: git
+      url: https://github.com/ayeitsmeyoboi/Satellite1-ESPHome
+      ref: develop
     components:
       - audio
       - fusb302b
@@ -112,6 +113,7 @@ external_components:
       - snapcast
       - speaker
       - tas2780
+    refresh: 0s
 
 logger:
   deassert_rts_dtr: true
