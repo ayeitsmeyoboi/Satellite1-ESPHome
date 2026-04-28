@@ -161,6 +161,11 @@ voice_assistant:
           - script.execute: control_leds
           # Start a script that would potentially enable the stop word if the response is longer than a second
           - script.execute: activate_stop_word_once
+  on_tts_end:
+    - homeassistant.event:
+        event: satellite1_tts_ready
+        data:
+          url: !lambda 'return x;'
   # When the voice assistant ends ...
   on_end:
     - wait_until:
